@@ -1,0 +1,62 @@
+@import "assets/styles/bootstrap-overrides";
+@import "assets/styles/bootstrap-dependencies";
+@import "assets/styles/fonts";
+@import "bootstrap-icons";
+
+html{
+  font-size: 14px;
+  body{
+    font-family: 'Manrope-Regular' , sans-serif;
+    font-size: 14px;
+
+    .modal {
+      .modal-dialog {
+        position: fixed;
+        top: auto;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        margin: auto;
+        padding: 15px;
+
+        .modal-content {
+          border-radius: 30px;
+          overflow: hidden;
+        }
+      }
+      &.fade {
+        .modal-dialog {
+          transition: transform .3s ease-in-out !important;
+          transform: translate3d(0, 100vh, 0);
+        }
+        &.in {
+          .modal-dialog {
+            transform: translate3d(0, 0, 0);
+            transition: transform .2s ease-in-out !important;
+          }
+        }
+        &.show {
+          .modal-dialog {
+            transform: none !important;
+            transition: transform 2s ease-in-out !important;
+
+          }
+        }
+      }
+    }
+    .progress {
+      padding: 4px;
+      height: 18px;
+      border-radius: 30px;
+      background: #8B7502;
+      width: 95%;
+      margin: auto;
+      .progress-bar {
+        border-radius: 30px;
+        background: #FFD600;
+      }
+    }
+  }
+}
+

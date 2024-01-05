@@ -1,0 +1,9 @@
+@import "mixins/fonts_mixin";
+@include font-face("Manrope-Bold", "Manrope-Bold", "Manrope", "sans-serif");
+@include font-face("Manrope-ExtraBold", "Manrope-ExtraBold", "Manrope", "sans-serif");
+@include font-face("Manrope-ExtraLight", "Manrope-ExtraLight", "Manrope", "sans-serif");
+@include font-face("Manrope-Light", "Manrope-Light", "Manrope", "sans-serif");
+@include font-face("Manrope-Medium", "Manrope-Medium", "Manrope", "sans-serif");
+@include font-face("Manrope-Regular", "Manrope-Regular", "Manrope", "sans-serif");
+@include font-face("Manrope-SemiBold", "Manrope-SemiBold", "Manrope", "sans-serif");
+@include fontSize($size: 0.07142857142857142rem);

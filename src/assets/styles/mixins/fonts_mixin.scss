@@ -1,0 +1,36 @@
+@mixin font-face($style-name, $file, $family, $category: "") {
+  $filepath: "./assets/fonts/" + $family + "/" + $file;
+  @font-face {
+    font-family: "#{$style-name}";
+    src: url($filepath + ".ttf");
+    src: url($filepath + ".eot?#iefix") format("embedded-opentype"),
+      url($filepath + ".woff") format("woff");
+  }
+  .#{$style-name} {
+    font: {
+      @if $category != "" {
+        family: "#{$style-name}", #{$category};
+      } @else {
+        family: "#{$style-name}";
+        weight: normal;
+      }
+    }
+  }
+}
+
+@mixin fontSize($size: 1rem) {
+  @for $i from 1 through 100 {
+    .fs-#{$i} {
+      font-size: $size !important;
+    }
+    $size: $size + 0.07142857142857142;
+  }
+}
+@mixin lineHeight($size: 1rem) {
+  @for $i from 0 through 100 {
+    .lh-#{$i} {
+      font-size: $size !important;
+    }
+    $size: $size + 0.07142857142857142;
+  }
+}

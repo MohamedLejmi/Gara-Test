@@ -1,0 +1,70 @@
+<div class="bg-secondary pass-modal-container text-center">
+  <div class="modal-header">
+    <div aria-label="Close" class="close" (click)="bsModalRef.hide()">
+      <span aria-hidden="true" class="bi bi-chevron-compact-up"></span>
+    </div>
+  </div>
+  <div class="modal-body">
+    <div class="pass-info-box mb-3">
+      <div class="avatar-block bg-forth">
+        <div class="avatar-image-container">
+          <img src="assets/icons/pass-avatar.svg" alt="">
+        </div>
+        <span class="pass-value text-white Manrope-Bold">235</span>
+        <span class="pass-des">
+          <img src="assets/icons/PG.svg" alt="">
+        </span>
+      </div>
+      <p class="Manrope-Bold fs-16 my-2">Tu as un pass en cours</p>
+      <div class="pass-type-container bg-forth">
+        <div class="pass-type-image-container">
+          <img src="assets/icons/pass-decouvert.svg" alt="">
+        </div>
+        <div class="pass-type fs-14">
+          <div class="pass-type-title Manrope-Bold text-third">
+            Pass découverte
+          </div>
+          <div class="pass-type-description Manrope-Medium">
+            1 ebook + 1 jeu <span class="Manrope-ExtraLight"> - validité 24h</span>
+          </div>
+        </div>
+      </div>
+      <p class="my-2 Manrope-Light">Restant : <span class="Manrope-Bold"> 1 jeu </span> -  durée restante 10h</p>
+      <progressbar [value]="55"></progressbar>
+    </div>
+    <h3 class="fs-17 Manrope-ExtraBold pass-list-title mb-1">
+      Acheter un pass
+    </h3>
+    <p class="fs-14 Manrope-ExtraLight pass-list-description">
+      Profite à fond de Gara en souscrivant à un pass
+    </p>
+    <div class="pass-list">
+      <div class="pass-item" *ngFor="let item of list">
+        <div class="pass-item-image-container">
+          <img [src]="item.imgUrl" alt="">
+        </div>
+        <div class="pass w-100">
+          <div class="pass-item-title Manrope-ExtraBold text-third">
+            {{item.title}}
+          </div>
+          <div class="pass-item-description Manrope-Medium fs-12">
+            {{item.gifts}}
+          </div>
+          <div class="pass-item-description Manrope-ExtraLight fs-10">
+            {{item.points}}
+          </div>
+        </div>
+        <div class="right-icon-button">
+          <span class="bi bi-chevron-right"></span>
+        </div>
+      </div>
+    </div>
+    <button class="btn btn-primary Manrope-ExtraBold w-90 mx-auto d-flex align-items-center">
+      <div class="w-100">Je suis radin</div>
+      <div class="right-icon-button">
+        <span class="bi bi-chevron-right"></span>
+      </div>
+    </button>
+    <button class="btn btn-link Manrope-SemiBold w-100 text-third">Je suis radin</button>
+  </div>
+</div>

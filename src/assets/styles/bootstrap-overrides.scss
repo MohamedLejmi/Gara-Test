@@ -1,0 +1,95 @@
+@import "variables";
+
+
+$spacer: 1rem;
+$spacers: ();
+$spacers: map-merge(
+    (
+      0: 0,
+      1: ($spacer * .25),
+      2: ($spacer * 0.7142857142857143),
+      3: $spacer * 1.0714285714285714,
+      4: ($spacer * 1.4285714285714286),
+      5: ($spacer * 2),
+      6: ($spacer * 2.5),
+      7: ($spacer * 3),
+      8: ($spacer * 3.5),
+      9: ($spacer * 4),
+      10: ($spacer * 4.5)
+    ),
+    $spacers
+);
+
+$position-values: (
+  0: 0,
+  1: 1rem,
+  50: 50%,
+  100: 100%
+);
+$enable-negative-margins : true;
+
+$colors: ("primary":$primary, "secondary":$secondary, "third": $third, "forth":$forth, "blue":$blue);
+$font-size-base: 1rem;
+$theme-colors: (
+  "primary":rgba($primary, 1),
+  "secondary":rgba($secondary, 1),
+  "third":rgba($third, 1),
+  "forth":rgba($forth, 1),
+  "gray":rgba($gray, 1),
+  "lightGray":rgba($lightGray, 1),
+  "blue":rgba($blue, 1),
+  "dark":$dark,
+);
+
+$body-bg: white;
+
+$primary: map_get($theme-colors, "primary");
+$secondary: map_get($theme-colors, "secondary");
+$third: map-get($theme-colors, "third");
+$forth: map-get($theme-colors, "forth");
+$gray: map-get($theme-colors, "gray");
+$lightGray: map-get($theme-colors, "lightGray");
+$blue: map-get($theme-colors, "blue");
+
+$dark: map-get($theme-colors, "dark");
+
+
+$mainFont-medium: "Manrope-Medium", sans-serif;
+$mainFont-bold: "Manrope-Bold", sans-serif;
+$mainFont-extraBold: "Manrope-ExtraBold", sans-serif;
+$mainFont-extraLight: "Manrope-ExtraLight", sans-serif;
+$mainFont-light: "Manrope-Light", sans-serif;
+$mainFont-regular: "Manrope-Regular", sans-serif;
+$mainFont-semiBold: "Manrope-SemiBold", sans-serif;
+
+
+$btn-border-radius: 50px;
+$btn-border-radius-sm: 50px;
+$btn-border-radius-lg: 50px;
+$btn-padding-x-sm: 24px;
+$btn-padding-y-sm: 10px;
+$input-btn-padding-x-lg: 30px;
+$input-btn-padding-y-lg: 12px;
+$btn-font-size-sm: 1.1428571428571428rem;
+$btn-font-size-lg: 1.1428571428571428rem;
+$btn-font-family: $mainFont-medium;
+$btn-border-radius-md: 20px;
+$btn-border-width: 1px;
+$input-border-width: 1px;
+$input-border-radius: 4px;
+$input-border-radius-lg: 4px;
+$input-box-shadow: 0 10 20px;
+$input-padding-x: 1.4285714285714286rem;
+$input-padding-y: 0;
+$input-height: 48px !important;
+$input-height-lg: 48px !important;
+$input-placeholder-color: rgba($forth, 0.45);
+$nav-tabs-border-width: 0;
+$grid-gutter-width: 20px;
+$modal-backdrop-bg: #28293D;
+$modal-backdrop-opacity: 0.8;
+.btn {
+  min-width: 126px;
+  height: 44px;
+}
+
